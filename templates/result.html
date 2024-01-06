@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block head %}
+    <link rel="stylesheet" href="{{url_for('static', filename='css/result.css')}}">
+{% endblock %}
+{%block body %}
+<div class="result-container">
+    {% if prediction == 0 %}
+    <p class="not-survived">The probability that you will not survive is {{ Probability }}</p>
+    {% elif prediction == 1 %}
+    <p class="survived">The probability of you surviving is {{ Probability }}</p>
+    {% else %}
+    <p class="invalid">Invalid Prediction</p>
+    {% endif %}
+    <!-- <p><strong>Probability: {{ Probability }}</strong></p> -->
+    <h2>Recent Predictions</h2>
+    {{ table_html | safe }}
+
+    <p><a href="{{ url_for('index') }}">Go Back</a></p>
+</div>
+{% endblock %}

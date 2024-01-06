@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>{{ Team }}</title>
+{% endblock %}
+
+{% block body %}
+<!-- Start contact -->
+<div class="contact">
+    <div class="container">
+        <!-- Ali Mohamed -->
+        <div class="contact-person">
+            <img src="{{ url_for('static', filename='photos/ali_mohamed.jpg') }}" alt="Ali Mohamed">
+            <h3>Ali Mohamed</h3>
+            <p>Role: Machine Learning Engineer<br>
+                Additional Role: Backend Developer<br>
+                Position: Team Leader</p>
+            <a href="www.linkedin.com/in/ِali-mohamed-4218391b1" target="_blank">LinkedIn</a>
+            <a href="" target="_blank">Facebook</a>
+            <a href="https://github.com/alim9hamed" target="_blank">GitHub</a>
+        </div>
+
+        <!-- Beltagy Mohamed -->
+        <div class="contact-person">
+            <img src="{{ url_for('static', filename='photos/beltagy_mohamed.jpg') }}" alt="Beltagy Mohamed">
+            <h3>Beltagy Mohamed</h3>
+            <p>Role: Data Analyst</p>
+            <a href="https://www.linkedin.com/in/beltagy-mohamed/" target="_blank">LinkedIn</a>
+            <a href="https://www.facebook.com/beltagy.mohamed/" target="_blank">Facebook</a>
+            <a href="https://github.com/beltagy-mohamed/" target="_blank">GitHub</a>
+        </div>
+
+        <!-- Mohamed Ahmed -->
+        <div class="contact-person">
+            <img src="{{ url_for('static', filename='photos/mohamed_ahmed.jpg') }}" alt="Mohamed Ahmed">
+            <h3>Mohamed Ahmed</h3>
+            <p>Role: Frontend Developer</p>
+            <a href="https://www.linkedin.com/in/mohamed-ahmed/" target="_blank">LinkedIn</a>
+            <a href="https://www.facebook.com/mohamed.ahmed/" target="_blank">Facebook</a>
+            <a href="https://github.com/mohamed-ahmed/" target="_blank">GitHub</a>
+        </div>
+
+        <!-- Ziad Selim -->
+        <div class="contact-person">
+            <img src="{{ url_for('static', filename='photos/ziad_selim.jpg') }}" alt="Ziad Selim">
+            <h3>Ziad Selim</h3>
+            <p>Role: Backend Developer</p>
+            <a href="https://www.linkedin.com/in/ziad-selim/" target="_blank">LinkedIn</a>
+            <a href="https://www.facebook.com/ziad.selim/" target="_blank">Facebook</a>
+            <a href="https://github.com/ziad-selim/" target="_blank">GitHub</a>
+        </div>
+
+        <!-- Abdelrahman Ramadan -->
+        <div class="contact-person">
+            <img src="{{ url_for('static', filename='photos/abdelrahman_ramadan.jpg') }}" alt="Abdelrahman Ramadan">
+            <h3>Abdelrahman Ramadan</h3>
+            <p>Role: Backend Developer</p>
+            <a href="https://www.linkedin.com/in/abdelrahman-ramadan/" target="_blank">LinkedIn</a>
+            <a href="https://www.facebook.com/abdelrahman.ramadan/" target="_blank">Facebook</a>
+            <a href="https://github.com/abdelrahman-ramadan/" target="_blank">GitHub</a>
+        </div>
+    </div>
+</div>
+<!-- End contact -->
+{% endblock %}

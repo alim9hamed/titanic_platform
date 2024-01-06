@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+
+{%block body %}
+
+<!-- start landing section -->
+<div class="landing">
+    <div class="text-area">
+        <div class="container">
+            <form action="/predict" method="post" enctype="multipart/form-data">
+                <!-- Input Type Parch -->
+                <div class="form-control">
+                    <label for="Parch" id="label-Parch">
+                        Parents
+                    </label>
+                    <select required name="Parch" id="Parch">
+                        <option value="0">None</option>
+                        <option value="1">Father or Mother</option>
+                        <option value="2">Both</option>
+                        
+                    </select>
+                </div>
+                <!-- Input Type SibSp -->
+                <div class="form-control">
+                    <label for="SibSp" id="label-SibSp">
+                        Siblings
+                    </label>
+                    <select required name="SibSp" id="SibSp">
+                        <option value="0">None</option>
+                        <option value="1">One Sibling</option>
+                        <option value="2">Two Siblings</option>
+                        <option value="3">Three Siblings</option>
+                        <option value="4">Four Siblings</option>
+                        <option value="5">Five Siblings</option>
+                    </select>
+                </div>
+                <!-- Input Type Age -->
+                <div class="form-control">
+                    <label for="Age" id="label-Age">
+                        Age
+                    </label>
+                    <input type="number" name="Age" id="Age" min="1" max="100" required
+                        placeholder="Enter your Age">
+                </div>
+                <!-- Input Type Fare -->
+                <div class="form-control">
+                    <label for="Fare" id="label-Fare">
+                        Price Ticket
+                    </label>
+                    <input type="number" name="Fare" id="Fare" min="0" max="600" required placeholder="Enter Fare">
+                </div>
+                <!-- Input Type Gender -->
+                <div class="form-control">
+                    <label for="Gender" id="label-Gender">
+                        Gender
+                    </label>
+                    <select required name="Gender" id="Gender">
+                        <option value="0">Male</option>
+                        <option value="1">Female</option>
+                    </select>
+                </div>
+                <!-- Input Type Pclass -->
+                <div class="form-control">
+                    <label for="pclass" id="label-pclass">
+                        Passenger Class
+                    </label>
+                    <select required name="Pclass" id="pclass">
+                        <option value="1">First Class</option>
+                        <option value="2">Second Class</option>
+                        <option value="3">Third Class</option>
+                    </select>
+                </div>
+                <!-- Input Type Embarked -->
+                <div class="form-control">
+                    <label for="Embarked" id="label-Embarked">
+                        Passengers Embarked
+                    </label>
+                    <select required name="Embarked" id="Embarked">
+                        <option value="2">Cherbourg</option>
+                        <option value="0">Queenstown</option>
+                        <option value="1">Southampton</option>
+                    </select>
+                </div>
+                <div class="button">
+                    <input type="reset" value="Clear Now">
+                    <input type="submit" value="Submit Now">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- end landing section -->
+{% endblock %}
+    

@@ -1,0 +1,526 @@
+/* Reset some default styles */
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+}
+
+/*start variables*/
+:root {
+    --main-color: rgb(7, 202, 251);
+    --sec-color: #2c4755;
+    --sec-padding: 60px;
+    --sec-background: #F6F6F6;
+    --main-duration: .4s;
+    --main-border-radius: 15px;
+    --little-padding: 10px;
+    --important-color: red;
+}
+
+/*end of variables*/
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.special-heading {
+    color: var(--main-color);
+    font-size: 100px;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin: 0;
+    animation-name: head-color;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.special-heading+p {
+    text-align: center;
+    font-size: 20px;
+    margin: -30px 0 0;
+    color: #797979;
+}
+
+/* start global rules*/
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*small*/
+@media (min-width:768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/*medium*/
+@media (min-width:992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/*large*/
+@media (min-width:1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* end of global rules*/
+
+
+
+/* Navbar styles */
+.navbar {
+    background-color: #3abbb6;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px 0%;
+    text-align: left;
+    /* Align the text to the left */
+    margin-left: 0%;
+    /* Leave 8% space on the left */
+}
+
+.navbar .container {
+    width: 95%;
+    /* Adjust the width as needed */
+    margin: 0 auto;
+    /* Center the container */
+    display: flex;
+    justify-content: space-between;
+    /* Ensure title and sections are on the same line */
+    align-items: center;
+    /* Vertically center the items */
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar li:first-child {
+    margin-left: 0;
+    /* Override the margin for the first child (Home) */
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.navbar li a:hover {
+    color: #e60023;
+}
+
+.navbar-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    /* Adjust the color as needed */
+    margin-right: 20px;
+    /* Add some right margin for separation */
+}
+
+/* Responsive styles for smaller screens */
+@media only screen and (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar li {
+        margin: 10px 0;
+    }
+}
+
+
+
+
+
+
+/*end landing section*/
+.landing {
+    background-image: url('../photos/1rt.jpg');
+    background-size: cover;
+    /* background-position: center; */
+    /* height: calc(100vh - 64px); */
+    height: 100%;
+    position: relative;
+    opacity: 1;
+}
+
+.landing .container {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Styling the Form (Color, Padding, Shadow) */
+form {
+    background-color: rgb(132, 203, 228);
+    max-width: 500px;
+    margin: 100px auto;
+    padding: 30px 20px;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+    opacity: .7;
+    border-radius: 25px;
+}
+
+/* Styling form-control Class */
+.form-control {
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+/* Styling form-control Label */
+.form-control label {
+    display: block;
+    margin-bottom: 10px
+}
+
+.form-control input,
+select:focus {
+    border: 1px solid red;
+    outline-width: 0;
+}
+
+.form-control select {
+    border-radius: 5px;
+}
+
+.form-control select:hover {
+    background-color: aqua;
+    opacity: .7;
+}
+
+.bottun input {
+    border-radius: var(--main-border-radius);
+}
+
+.bottun input:hover {
+    background-color: cyan;
+}
+
+/*end landing section*/
+/*start contact*/
+.contact {
+    padding-top: var(--sec-padding);
+    padding-bottom: var(--sec-padding);
+    background-color: var(--sec-background);
+}
+
+.contact .info {
+    padding-top: var(--sec-padding);
+    padding-bottom: var(--sec-padding);
+    text-align: center;
+}
+
+.contact .info .label {
+    color: var(--sec-color);
+    margin-bottom: 20px;
+    font-size: 40px;
+    font-weight: 800;
+    letter-spacing: -2px;
+}
+
+.contact .info .link {
+    color: var(--main-color);
+    font-size: 40px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+@media (max-width: 767px) {
+
+    .contact .info .label,
+    .contact .info .link {
+        font-size: 25px;
+    }
+}
+
+.contact .info .social {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.contact .info .social i {
+    color: var(--sec-color);
+    margin-left: 10px;
+}
+
+/*end contact*/
+/*start footer*/
+.footer {
+    background-color: #3abbb6;
+    text-align: center;
+    color: white;
+    text-transform: capitalize;
+    padding: 20px 10px;
+    font-size: 18px;
+}
+
+.footer span {
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+/*end footer*/
+
+/* Reset some default styles */
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.container1 {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.about {
+    background-color:#fff;
+    padding: 40px 20px;
+}
+
+.about p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.about h2,
+.about strong {
+    font-size: 24px;
+    color: #333;
+    margin-top: 20px;
+}
+
+.about ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.about li {
+    margin-bottom: 10px;
+}
+
+.about a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.about a:hover {
+    text-decoration: underline;
+}
+
+/* References section */
+.about h2 {
+    margin-top: 40px;
+}
+
+.about ul {
+    margin-top: 20px;
+}
+
+.about li {
+    margin-bottom: 10px;
+}
+
+.about a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.about a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+    .container1 {
+        padding: 15px;
+    }
+
+    .about {
+        padding: 30px 15px;
+    }
+}
+
+
+/* Add your general styles for the whole page in base.css or another appropriate file */
+
+/* Styles specific to the 'contact' section */
+.contact {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #f9f9f9;
+    text-align: center;
+    /* Center the contact persons */
+}
+
+.contact h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+    color: #333;
+}
+
+/* Updated styles for contact persons */
+.contact-person {
+    display: inline-block;
+    /* Display contact persons in a line */
+    margin: 0 10px;
+    /* Add spacing between contact persons */
+    vertical-align: top;
+    /* Align contact persons to the top */
+    width: calc(33.33% - 20px);
+    /* Adjust width to fit three persons in a line (subtracting margins) */
+    box-sizing: border-box;
+    /* Include padding and border in the width calculation */
+}
+
+.contact-person img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.contact-person h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.contact-person p {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.contact-person a {
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 8px 20px;
+    font-size: 14px;
+    text-decoration: none;
+    color: #0000FF;
+    /* Change this color to black */
+    border-radius: 5px;
+}
+
+.contact-person a:hover {
+    background-color: #333;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+    .contact-person {
+        width: calc(50% - 20px);
+        /* Adjust width to fit two persons in a line for smaller screens */
+    }
+
+    .contact-person img {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+/* Add this to your existing CSS file or create a new one (e.g., about.css) */
+.video-section {
+    margin-top: 20px;
+    /* Adjust the top margin as needed */
+    max-width: 800px;
+    /* Adjust the maximum width of the video container */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+video {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    /* Adjust the bottom margin as needed */
+}
+
+/* Style for the fallback message */
+video::after {
+    content: "Your browser does not support the video tag.";
+    display: block;
+    margin-top: 10px;
+    /* Adjust the top margin as needed */
+    color: #333;
+    /* Adjust the color as needed */
+    font-size: 14px;
+    /* Adjust the font size as needed */
+}
+
+/* Optional: Style the video controls */
+video::-webkit-media-controls {
+    background-color: rgba(0, 0, 0, 0.0);
+    /* Adjust the background color as needed */
+    color: #fff;
+    /* Adjust the text color as needed */
+}
+
+video::media-controls-start-playback-button {
+    display: none;
+    /* Hide the play button in the center of the video */
+}

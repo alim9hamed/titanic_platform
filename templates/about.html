@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% block head %}
+<link rel="stylesheet" href="{{url_for('static', filename='css/about.css')}}">
+<title>{{ about}}</title>
+{% endblock %}
+
+{% block body %}
+<!-- Start about -->
+<!-- Video Section -->
+
+<div class="about">
+    <div class="container1">
+
+        <h1>
+            <p>The Titanic Website System is not just a website; it's a meticulously crafted platform that seamlessly
+                blends
+                history and technology, offering a one-of-a-kind exploration into the legendary Titanic voyage. Our
+                mission
+                is
+                to provide users with an immersive experience, allowing them to delve deep into the details of this
+                iconic
+                maritime tragedy and, This is a detailed video explaining what happened on the Titanic.</p>
+        </h1>
+        <div class="video-section">
+            <video width="100%" height="auto" controls>
+                <source src="{{url_for('static', filename='videos/titanic.mp4')}}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <p><strong>Dedication to Preservation</strong></p>
+        <p>At the heart of the Titanic Website System is a profound dedication to preserving the memory of the Titanic
+            and
+            commemorating the lives affected by this historic event. We understand the significance of the Titanic in
+            shaping maritime history, and our platform reflects this commitment through a combination of interactive
+            features, historical insights, and cutting-edge technologies.</p>
+
+        <p><strong>Educational and Captivating</strong></p>
+        <p>More than just a repository of information, the Titanic Website System serves as an educational and
+            captivating
+            platform for a diverse audience. Whether you're an enthusiast, a student, or simply someone fascinated by
+            the stories of the Titanic, our website provides a rich tapestry of content designed to engage and
+            enlighten.</p>
+
+        <p><strong>Discovering the Titanic</strong></p>
+        <p>Embark on a journey to discover the intricate details of the ship, from its grandeur to the minute design
+            elements. Learn about the passengers and crew who were part of this historic voyage, and explore the
+            circumstances surrounding that fateful night. Our commitment is to deliver a thoughtful and respectful
+            exploration of history, allowing you to connect with the past in a meaningful and profound way.</p>
+
+        <p><strong>Modern Technology Integration</strong></p>
+        <p>The Titanic Website System is not bound by the pages of history; it embraces modern web technologies to offer
+            a seamless and interactive experience. Leveraging the power of Flask and Streamlit, our platform combines
+            functionality with elegance, ensuring that users can navigate effortlessly while gaining profound insights
+            into one of the most significant events in maritime history.</p>
+
+        <p><strong>Invitation to Explore</strong></p>
+        <p>We extend a warm invitation to explore the various features embedded within our website. From interactive
+            timelines to in-depth articles, our platform is designed to cater to diverse interests and learning
+            preferences. Join us in unraveling the layers of the Titanic's story and gain a deeper understanding of the
+            events that unfolded on that historic night.</p>
+
+        <p>The Titanic Website System is not just a website; it's an invitation to connect with history, to learn, and
+            to
+            honor the legacy of the Titanic. Welcome aboard this digital voyage into the past.</p>
+        <h2>References:</h2>
+        <ul>
+            <li><a href="https://en.wikipedia.org/wiki/Titanic" target="_blank">Wikipedia - Titanic</a></li>
+            <li><a href="https://www.britannica.com/topic/Titanic" target="_blank">Britannica - Titanic</a></li>
+            <li><a href="https://www.noaa.gov/gc-international-section/rms-titanic-documents-and-references"
+                    target="_blank">NOAA - RMS Titanic Documents and References</a></li>
+
+        </ul>
+        </p>
+    </div>
+</div>
+<!-- End about -->
+{% endblock %}

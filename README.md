@@ -1,4 +1,5 @@
 # Titanic Platform
+<img src="/static/photos/titanic.jpg" alt="Description of the image">
 
 ## Overview
 
